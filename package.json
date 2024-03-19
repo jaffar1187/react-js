@@ -1,0 +1,24 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is react-js by jaffar.",
+  "scripts": {
+    "start": "parcel episode-03/index.html",
+    "build": "build parcel episode-03/index.html",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Jaffar Sharieff",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
