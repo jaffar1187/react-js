@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is react-js by jaffar.",
   "scripts": {
-    "start": "parcel episode-03/index.html",
-    "build": "build parcel episode-03/index.html",
+    "start": "parcel food-ordering-app/index.html",
+    "build": "build parcel food-ordering-app/index.html",
     "test": "jest"
   },
   "keywords": [],
