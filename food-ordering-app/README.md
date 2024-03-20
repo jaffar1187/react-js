@@ -1,0 +1,17 @@
+<!--
+-- Project structure
+- Header
+- -logo
+- - Nav items i.e home, about, cart
+-
+- Body
+- - Search
+- - Restaurant container
+- - Restaurant card
+- - Img
+- - Name of res, Star rating, cuisine, delivery time
+- Footer
+- - Copyright
+- - links
+- - Contact Info
+- \*/ -->

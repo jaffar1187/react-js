@@ -1,25 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-/**
- * Header
- * -logo
- * - Nav items i.e home, about, cart
- *
- * Body
- * - Search
- * - Restaurant container
- *  - Restaurant card
- *    - Img
- *    - Name of res, Star rating, cuisine, delivery time
- * Footer
- * - Copyright
- * - links
- * - Contact Info
- *
- */
-
-const resData = [
+let resData = [
   {
     info: {
       id: "23818",
@@ -1273,69 +1252,4 @@ const resData = [
   },
 ];
 
-const HeaderComponent = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
-          className="logo"
-        ></img>
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const RestaurantCard = (props) => {
-  const { resData } = props;
-  const { name, costForTwo, avgRating, sla, cloudinaryImageId } = resData.info;
-  const { deliveryTime } = sla;
-  return (
-    <div className="res-card">
-      <img
-        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
-        alt="meghana food"
-        className="res-logo"
-      />
-      <h3>{name}</h3>
-      <h4>{costForTwo}</h4>
-      <h4>{avgRating + " ⭐️ "}</h4>
-      <h4>{deliveryTime + " minutes"}</h4>
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="res-container">
-        {resData.map((restaurant) => {
-          return (
-            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <HeaderComponent />
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default resData;
