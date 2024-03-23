@@ -68,3 +68,13 @@
 button {
   cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-card {
+  padding: 10px;
+  border: 1px solid black;
+}
