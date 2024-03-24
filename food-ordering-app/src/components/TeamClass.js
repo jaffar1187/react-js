@@ -24,8 +24,8 @@ class TeamClass extends React.Component {
   render() {
     const { avatar_url, name, location, login } = this.state.userInfo;
     return (
-      <div className="user-card">
-        <img src={avatar_url}></img>
+      <div className="user-card m-4 p-4 bg-red-200 rounded-lg w-96">
+        <img src={avatar_url} className="rounded-lg w-24"></img>
         <h2>Name: {name}</h2>
         <h4>Location: {location}</h4>
         <h4>Contact: {login}</h4>
