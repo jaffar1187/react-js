@@ -43,7 +43,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      {console.log(restaurantListFromApi)}
+      {/* {console.log(restaurantListFromApi)} */}
       <div className="flex">
         <div className="search m-4 p-4">
           <input
@@ -105,7 +105,7 @@ const Body = () => {
               key={restaurant.info.id}
               to={`/restaurant/${restaurant.info.id}`}
             >
-              {typeof restaurant.info.promoted !== "undefined" ? (
+              {restaurant.info.avgRating < 4.6 ? (
                 <RestaurantCard resData={restaurant} />
               ) : (
                 <PromotedLabel resData={restaurant} />

@@ -1,4 +1,12 @@
 const getItemCards = (resInfo) => {
+  const categories =
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c) => {
+      return (
+        c?.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+      );
+    });
+
   let itemCards;
   if (
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
@@ -12,7 +20,7 @@ const getItemCards = (resInfo) => {
       resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
         ?.card?.itemCards;
   }
-  return itemCards;
+  return { itemCards, categories };
 };
 
 export default getItemCards;
