@@ -1,7 +1,14 @@
 import { CDN_URL } from "../../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../utils/cartSlice";
 
 const RestaurantCategoryBody = (props) => {
   const { items } = props;
+  const dispatch = useDispatch();
+
+  const handleaddItem = (item) => {
+    dispatch(addItem(item));
+  };
   return (
     <div>
       {items.map((item) => {
@@ -25,7 +32,10 @@ const RestaurantCategoryBody = (props) => {
             </div>
             <div className="w-3/12">
               <div className="absolute">
-                <button className="p-2 w-14 mx-14 rounded-lg bg-black text-white shadow-lg absolute m-auto text-xs">
+                <button
+                  className="p-2 w-14 mx-14 rounded-lg bg-black text-white shadow-lg absolute m-auto text-xs"
+                  onClick={() => handleaddItem(item)}
+                >
                   Add +
                 </button>
               </div>
