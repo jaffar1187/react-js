@@ -12,7 +12,7 @@ const RestaurantMenu = () => {
   if (!resInfo) return <Shimmer />;
   else {
     const { name, cuisines, costForTwoMessage } =
-      resInfo?.cards[0]?.card?.card?.info;
+      resInfo?.cards[2]?.card?.card?.info;
 
     const { itemCards, categories } = getItemCards(resInfo);
 

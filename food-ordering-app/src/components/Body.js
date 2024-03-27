@@ -7,11 +7,14 @@ import { SWIGGY_API } from "../../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+import UserContext from "../../utils/UserContext";
+import { useContext } from "react";
 
 const Body = () => {
   let [listOfRestaurant, setListOfRestaurant] = useState([]);
   let [restaurantListFromApi, setRestaurantListFromApi] = useState("");
   let [searchText, setSearchText] = useState("");
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   const PromotedLabel = WithPromotedLabel(RestaurantCard);
 
@@ -96,6 +99,16 @@ const Body = () => {
           >
             Top Rated Restaurants
           </button>
+        </div>
+        <div className="search m-4 p-4 flex items-center">
+          <label>UserName: </label>
+          <input
+            className="border border-black p-2 mx-2"
+            value={loggedInUser}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          ></input>
         </div>
       </div>
       <div className="flex flex-wrap">
