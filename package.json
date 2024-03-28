@@ -4,7 +4,7 @@
   "description": "This is react-js by jaffar.",
   "scripts": {
     "start": "parcel food-ordering-app/index.html",
-    "build": "build parcel food-ordering-app/index.html",
+    "build": "parcel build food-ordering-app/index.html",
     "test": "jest"
   },
   "keywords": [],
