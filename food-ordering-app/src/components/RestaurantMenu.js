@@ -22,15 +22,6 @@ const RestaurantMenu = () => {
         <p className="font-bold text-lg">
           {cuisines.join(", ") + " - " + costForTwoMessage}
         </p>
-        {/* <ul>
-          {itemCards.map((ele) => {
-            let key;
-            if (ele?.card?.info?.name) key = ele?.card?.info?.id;
-            else key = ele?.dish?.info?.id;
-
-            return <DishName key={key} elem={ele} />;
-          })}
-        </ul> */}
         <ul>
           {categories.map((category, index) => {
             return (

@@ -3,12 +3,12 @@ import {
   WithPromotedLabel,
 } from "./../components/RestaurantCard";
 import { useState, useEffect } from "react";
-import { SWIGGY_API } from "../../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 import UserContext from "../../utils/UserContext";
 import { useContext } from "react";
+import restaurant_data from "../../utils/restaurant-data";
 
 const Body = () => {
   let [listOfRestaurant, setListOfRestaurant] = useState([]);
@@ -19,16 +19,8 @@ const Body = () => {
   const PromotedLabel = WithPromotedLabel(RestaurantCard);
 
   const fetchData = async () => {
-    let restaurant_list = await fetch(SWIGGY_API);
-    restaurant_list = await restaurant_list.json();
-    setRestaurantListFromApi(
-      restaurant_list?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
-    setListOfRestaurant(
-      restaurant_list?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
+    setRestaurantListFromApi(restaurant_data);
+    setListOfRestaurant(restaurant_data);
   };
 
   useEffect(() => {

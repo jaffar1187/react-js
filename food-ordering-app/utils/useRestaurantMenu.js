@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { SWIGGY_MENU_API } from "./constants";
+import restaurant_category_body_data from "./../utils/restaurant-category-body-data";
 
 const useRestaurantMenu = () => {
   const { resId } = useParams();
   const [resInfo, setResInfo] = useState(null);
 
   const fetchData = async () => {
-    let data = await fetch(SWIGGY_MENU_API.replace("resId", resId));
-    data = await data.json();
-    setResInfo(data.data);
+    setResInfo(restaurant_category_body_data[resId]);
   };
 
   useEffect(() => {
