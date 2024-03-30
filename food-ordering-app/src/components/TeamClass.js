@@ -28,7 +28,7 @@ class TeamClass extends React.Component {
         <img src={avatar_url} className="rounded-lg w-24"></img>
         <h2>Name: {name}</h2>
         <h4>Location: {location}</h4>
-        <h4>Contact: {login}</h4>
+        <h4>Contact: @{login}</h4>
       </div>
     );
   }

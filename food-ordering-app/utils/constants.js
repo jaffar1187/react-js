@@ -5,10 +5,10 @@ const LOGO_URL =
   "https://images.unsplash.com/photo-1628557010295-dd9198c31b84?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 const SWIGGY_API =
-  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0605807&lng=77.63438169999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9111498&lng=77.6838001&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
 let SWIGGY_MENU_API =
-  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.0605807&lng=77.63438169999999&restaurantId=resId";
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9111498&lng=77.6838001&restaurantId=resId";
 
 const CDN_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
